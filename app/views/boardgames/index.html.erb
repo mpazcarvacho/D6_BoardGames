@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Boardgames</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Min players</th>
+      <th>Max players</th>
+      <th>Description</th>
+      <th>Ages</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boardgames.each do |boardgame| %>
+      <tr>
+        <td><%= boardgame.name %></td>
+        <td><%= boardgame.min_players %></td>
+        <td><%= boardgame.max_players %></td>
+        <td><%= boardgame.description %></td>
+        <td><%= boardgame.ages %></td>
+        <td><%= link_to 'Show', boardgame %></td>
+        <td><%= link_to 'Edit', edit_boardgame_path(boardgame) %></td>
+        <td><%= link_to 'Destroy', boardgame, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boardgame', new_boardgame_path %>

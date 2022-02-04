@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Imagepieces</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @imagepieces.each do |imagepiece| %>
+      <tr>
+        <td><%= imagepiece.name %></td>
+        <td><%= link_to 'Show', imagepiece %></td>
+        <td><%= link_to 'Edit', edit_imagepiece_path(imagepiece) %></td>
+        <td><%= link_to 'Destroy', imagepiece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Imagepiece', new_imagepiece_path %>
