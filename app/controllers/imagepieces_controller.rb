@@ -65,6 +65,6 @@ class ImagepiecesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def imagepiece_params
-      params.require(:imagepiece).permit(:name)
+      params.require(:imagepiece).permit(:name, img_pieces: [])
     end
 end

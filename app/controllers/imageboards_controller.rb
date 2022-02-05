@@ -65,6 +65,6 @@ class ImageboardsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def imageboard_params
-      params.require(:imageboard).permit(:name)
+      params.require(:imageboard).permit(:name, :img_board)
     end
 end

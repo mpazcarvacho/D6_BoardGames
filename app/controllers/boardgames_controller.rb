@@ -4,6 +4,7 @@ class BoardgamesController < ApplicationController
   # GET /boardgames or /boardgames.json
   def index
     @boardgames = Boardgame.all
+    @attachments = Attachment.all
   end
 
   # GET /boardgames/1 or /boardgames/1.json
