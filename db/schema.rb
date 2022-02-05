@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_04_113024) do
+ActiveRecord::Schema.define(version: 2022_02_05_124158) do
 
   create_table "attachment_boardgames", force: :cascade do |t|
-    t.integer "attachment_id_id"
-    t.integer "boardgame_id_id"
+    t.integer "attachment_id"
+    t.integer "boardgame_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["attachment_id_id"], name: "index_attachment_boardgames_on_attachment_id_id"
-    t.index ["boardgame_id_id"], name: "index_attachment_boardgames_on_boardgame_id_id"
+    t.index ["attachment_id"], name: "index_attachment_boardgames_on_attachment_id"
+    t.index ["boardgame_id"], name: "index_attachment_boardgames_on_boardgame_id"
   end
 
   create_table "attachments", force: :cascade do |t|
